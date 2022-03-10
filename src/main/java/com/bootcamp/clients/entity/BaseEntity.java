@@ -1,17 +1,19 @@
 package com.bootcamp.clients.entity;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
-@Document
-public class ClientType {
+import java.time.LocalDateTime;
+
+@Getter
+@Setter
+public abstract class BaseEntity {
 
     @Id
     private String id;
 
-    private String name;
+    private LocalDateTime createdAt;
+
+    private LocalDateTime updatedAt;
 }
