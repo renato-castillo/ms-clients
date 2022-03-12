@@ -2,12 +2,16 @@ package com.bootcamp.clients;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+@EntityScan(basePackages = "com.bootcamp.clients")
+@SpringBootApplication(scanBasePackages = "com.bootcamp.clients")
 public class MsClientsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MsClientsApplication.class, args);
+
     }
 
 }
