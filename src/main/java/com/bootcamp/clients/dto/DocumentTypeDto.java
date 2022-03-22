@@ -9,7 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@Document("documentType")
 public class DocumentTypeDto {
     private String id;
     private String name;
